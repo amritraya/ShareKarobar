@@ -9,9 +9,9 @@
    >
 
     <RelativeLayout
+        android:id="@+id/relativelayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/relativelayout"
         android:layout_marginBottom="65dp"
         android:padding="5dp">
 
@@ -20,7 +20,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottonnav"
+        android:id="@+id/bottomnav"
         app:menu="@menu/bottom_nav"
         android:layout_alignParentBottom="true">
 
