@@ -9,12 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.app.splashScreen.SplashScreen;
-import com.example.app.userProfile.UserProfile;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import com.example.app.fragment.HomeFrag;
 import com.example.app.fragment.MarketFrag;
+import com.example.app.userProfile.UserProfile;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     super.onCreate(savedInstancesState);
     setContentView(R.layout.activity_main);
 
-    bottomNavigationView=findViewById(R.id.bottonnav);
+    bottomNavigationView=findViewById(R.id.bottomnav);
     bottomNavigationView.setOnNavigationItemSelectedListener(this);
     loadFragment(new HomeFrag());
 
@@ -55,12 +53,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     //loading fragment view when click on specific item
     void loadFragment(Fragment fragment){
         getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout,fragment).commit();
-    }
-    @Override
-    public void onBackPressed(){
-        FragmentManager fragmentManager =getSupportFragmentManager();
-        Fragment fragment= fragmentManager.findFragmentById(R.id.home);
-
     }
     
 }
