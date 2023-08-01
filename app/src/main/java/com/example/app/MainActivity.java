@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     }
     //loading fragment view when click on specific item
     void loadFragment(Fragment fragment){
-        getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout,fragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentView,fragment).commit();
     }
     
 }

@@ -4,206 +4,210 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#ececec"
     tools:context=".userProfile.UserProfile">
 
 
- <ScrollView
-     android:layout_height="match_parent"
-     android:layout_width="match_parent">
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/topBg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/top_background" />
-
-            <ImageView
-                android:id="@+id/userPro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/topBg"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/topBg"
-                app:layout_constraintTop_toTopOf="@+id/topBg"
-                app:srcCompat="@drawable/profile" />
-
-            <TextView
-                android:id="@+id/userName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="Raya Susan Chhetri"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/userPro"
-                app:layout_constraintStart_toStartOf="@+id/userPro"
-                app:layout_constraintTop_toBottomOf="@+id/userPro" />
-
-            <TextView
-                android:id="@+id/userEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="rayaamrit03@gmail.com"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/userName"
-                app:layout_constraintStart_toStartOf="@+id/userName"
-                app:layout_constraintTop_toBottomOf="@+id/userName" />
-
-            <View
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="30dp"
-                android:background="#c0c0c0"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/userEmail" />
+                android:layout_height="match_parent">
 
-            <LinearLayout
-                android:id="@+id/userDetail"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="22dp"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/userEmail"
-                app:layout_constraintVertical_bias="1.0">
+                <ImageView
+                    android:id="@+id/topBg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/top_background" />
 
+                <ImageView
+                    android:id="@+id/userPro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/topBg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/topBg"
+                    app:layout_constraintTop_toTopOf="@+id/topBg"
+                    app:srcCompat="@drawable/profile" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_support"
-                    style="@android:style/Widget.Button"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_background_1"
-                    android:drawableStart="@drawable/fingerauth"
-                    android:drawablePadding="20dp"
-                    android:paddingStart="20dp"
-                    android:paddingLeft="20dp"
-                    android:text="Support"
-                    android:textAlignment="viewStart"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_sub"
-                    style="@android:style/Widget.Button"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_background_1"
-                    android:drawableStart="@drawable/fingerauth"
-                    android:drawableLeft="@drawable/fingerauth"
-                    android:drawablePadding="20dp"
-                    android:paddingStart="20dp"
-                    android:text="Subscription"
-                    android:textAlignment="viewStart"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_terms"
-                    style="@android:style/Widget.Button"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_background_1"
-                    android:drawableStart="@drawable/fingerauth"
-                    android:drawableLeft="@drawable/fingerauth"
-                    android:drawablePadding="20dp"
-                    android:paddingStart="20dp"
-                    android:text="Terms Condition"
-                    android:textAlignment="viewStart"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_privacy"
-                    style="@android:style/Widget.Button"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_background_1"
-                    android:drawableStart="@drawable/fingerauth"
-                    android:drawableLeft="@drawable/fingerauth"
-                    android:drawablePadding="20dp"
-                    android:paddingStart="20dp"
-                    android:text="Privacy"
-                    android:textAlignment="viewStart"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_account"
-                    style="@android:style/Widget.Button"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_background_1"
-                    android:drawableStart="@drawable/fingerauth"
-                    android:drawableLeft="@drawable/fingerauth"
-                    android:drawablePadding="20dp"
-                    android:paddingStart="20dp"
-                    android:text="Account Settings"
-                    android:textAlignment="viewStart"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/back_Button"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    style="@android:style/Widget.Button"
-                    android:background="@drawable/btn_background_2"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Back to Main page"
-                    android:textColor="#ffffff"
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Raya Susan Chhetri"
+                    android:textSize="25sp"
                     android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    app:layout_constraintEnd_toEndOf="@+id/userPro"
+                    app:layout_constraintStart_toStartOf="@+id/userPro"
+                    app:layout_constraintTop_toBottomOf="@+id/userPro" />
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/userEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:color="#000000"
+                    android:text="rayaamrit03@gmail.com"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/userName"
+                    app:layout_constraintStart_toStartOf="@+id/userName"
+                    app:layout_constraintTop_toBottomOf="@+id/userName" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#000000"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/userEmail" />
 
-    </LinearLayout>
-</ScrollView>
+                <LinearLayout
+                    android:id="@+id/userDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="22dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/userEmail"
+                    app:layout_constraintVertical_bias="1.0">
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_support"
+                        style="@android:style/Widget.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_background_1"
+                        android:drawableStart="@drawable/fingerauth"
+                        android:drawablePadding="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp"
+                        android:text="Support"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_sub"
+                        style="@android:style/Widget.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_background_1"
+                        android:drawableStart="@drawable/fingerauth"
+                        android:drawableLeft="@drawable/fingerauth"
+                        android:drawablePadding="20dp"
+                        android:paddingStart="20dp"
+                        android:text="Subscription"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_terms"
+                        style="@android:style/Widget.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_background_1"
+                        android:drawableStart="@drawable/fingerauth"
+                        android:drawableLeft="@drawable/fingerauth"
+                        android:drawablePadding="20dp"
+                        android:paddingStart="20dp"
+                        android:text="Terms Condition"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_privacy"
+                        style="@android:style/Widget.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_background_1"
+                        android:drawableStart="@drawable/fingerauth"
+                        android:drawableLeft="@drawable/fingerauth"
+                        android:drawablePadding="20dp"
+                        android:paddingStart="20dp"
+                        android:text="Privacy"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_account"
+                        style="@android:style/Widget.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_background_1"
+                        android:drawableStart="@drawable/fingerauth"
+                        android:drawableLeft="@drawable/fingerauth"
+                        android:drawablePadding="20dp"
+                        android:paddingStart="20dp"
+                        android:text="Account Settings"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/back_Button"
+                        style="@android:style/Widget.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/btn_background_2"
+                        android:text="Back to Main page"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
