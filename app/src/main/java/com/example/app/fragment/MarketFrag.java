@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -40,6 +41,7 @@ import java.util.List;
         private List<SecurityData> securityList;
         private RecyclerView recyclerView;
         private SecurityAdapter adapter;
+        private TextView responseTextView;
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,6 +53,7 @@ import java.util.List;
             adapter = new SecurityAdapter(securityList);
             recyclerView.setAdapter(adapter);
 
+
              // Fetch data using Volley
                 fetchDataFromAPI();
             return rootView;
@@ -59,32 +62,32 @@ import java.util.List;
         private void fetchDataFromAPI() {
             // Use Volley to fetch JSON data from the API
             // Replace 'YOUR_API_URL' with the actual API endpoint URL
-            String url = "http://127.0.0.1:5000/securityDailyTradeStat/58";
+            String url = "http://192.168.137.1/api.php";
             JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
 
-                    try {
-                        for (int i=0; i < response.length(); i++){
-                            JSONObject jsonObject=response.getJSONObject(0);
-                            String securityName=jsonObject.getString("securityName");
-                            String lastTradedPrice=jsonObject.getString("lastTradedPrice");
-
-                            SecurityData securityData=new SecurityData();
-                            securityData.setSecurityName(securityName);
-                            securityData.setLastTradedPrice(lastTradedPrice);
-
-                            securityList.add(securityData);
-
-                        }
-                        adapter.notifyDataSetChanged();
+//                    try {
+//                        for (int i=0; i < response.length(); i++){
+//                            JSONObject jsonObject=response.getJSONObject(0);
+//                            String securityName=jsonObject.getString("securityName");
+//                            String lastTradedPrice=jsonObject.getString("lastTradedPrice");
+//
+//                            SecurityData securityData=new SecurityData();
+//                            securityData.setSecurityName(securityName);
+//                            securityData.setLastTradedPrice(lastTradedPrice);
+//
+//                            securityList.add(securityData);
+//
+//                        }
+//                        adapter.notifyDataSetChanged();
 
                         Toast.makeText(getActivity(), response.toString(), Toast.LENGTH_SHORT).show();
 
-                    }
-                    catch (JSONException e){
-                        e.printStackTrace();
-                    }
+//                    }
+//                    catch (JSONException e){
+//                        e.printStackTrace();
+//                    }
 
                     }
                 }, new Response.ErrorListener() {

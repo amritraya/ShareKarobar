@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <FrameLayout
         android:orientation="vertical"
         android:id="@+id/fragmentView"
         android:layout_width="match_parent"

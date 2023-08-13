@@ -17,6 +17,7 @@ public class SecurityAdapter extends RecyclerView.Adapter<SecurityAdapter.Securi
     private List<SecurityData> securityList;
 
     public SecurityAdapter(List<SecurityData> securityList) {
+
         this.securityList = securityList;
     }
 
@@ -36,6 +37,7 @@ public class SecurityAdapter extends RecyclerView.Adapter<SecurityAdapter.Securi
 
     @Override
     public int getItemCount() {
+
         return securityList.size();
     }
 

@@ -13,10 +13,14 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Buy_Sell.SellActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Sell Stock"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".Buy_Sell.BuyActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Buy Stock"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".userProfile.UserProfile"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
